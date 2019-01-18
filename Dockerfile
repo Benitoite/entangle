@@ -2,7 +2,7 @@ FROM debian:stretch
 
 #   add the dependencies
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential locales meson libglib2.0-dev libgdk-pixbuf2.0-dev libgtk-3-dev libgphoto2-dev libgudev-1.0-dev gobject-introspection liblcms2-dev libpeas-dev libgexiv2-dev libraw-dev adwaita-icon-theme
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential locales git meson libglib2.0-dev libgdk-pixbuf2.0-dev libgtk-3-dev libgphoto2-dev libgudev-1.0-dev gobject-introspection liblcms2-dev libpeas-dev libgexiv2-dev libraw-dev adwaita-icon-theme
 
 #   prepare the environment
 
