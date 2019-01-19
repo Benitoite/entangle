@@ -1,6 +1,6 @@
 ### Entangle
 
-* A fork of https://gitlab.com/entangle/entangle/
+* The Entangle repo is located at https://gitlab.com/entangle/entangle/
 
 <hr>
 
