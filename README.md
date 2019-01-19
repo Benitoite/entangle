@@ -17,8 +17,8 @@
 
 * ## In Second Terminal
 
-3. `docker-machine kill default`
-4. `echo $(ifconfig en1 | grep inet\ | awk '{print $2}') > /private/var/tmp/hostip && echo $HOME>/private/var/tmp/homedir` 
+3. `echo $(ifconfig en1 | grep inet\ | awk '{print $2}') > /private/var/tmp/hostip`
+4. `echo $HOME>/private/var/tmp/homedir` 
 
 * ## In VirtualBox
 
