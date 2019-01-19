@@ -17,7 +17,7 @@ RUN mkdir -p ~/programs && git clone https://gitlab.com/entangle/entangle.git ~/
 
 #   configure build system and compile
 
-RUN cd ~/programs/code-entangle && meson build-dir && ninja -C build-dir all && ninja -C build-dir install
+RUN cd ~/programs/code-entangle && meson build-dir && ninja -C build-dir all && ninja -C build-dir install && ldconfig
 
 #   set the entrypoint command
 
