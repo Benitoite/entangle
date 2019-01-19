@@ -1,5 +1,33 @@
-# entangle
-Fork of https://gitlab.com/entangle/entangle/
+### Entangle
+
+* A fork of https://gitlab.com/entangle/entangle/
+
+<hr>
+
+# macOS 
+
+### Runs entangle in boot2docker VM and copies captures to timestamped dir in ~ on host.
+
+<br>
+
+* ## First Terminal
+
+1. `open -a Xquartz`
+2. `socat TCP-LISTEN:6000,bind=$(ifconfig -a|tail +9|grep 'inet '|cut -d ' ' -f 2|head -1),reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"`
+
+* ## In Second Terminal
+
+3. `docker-machine kill default`
+4. `echo $(ifconfig en1 | grep inet\ | awk '{print $2}') > /private/var/tmp/hostip && echo $HOME>/private/var/tmp/homedir` 
+
+* ## In VirtualBox
+
+5. Settings > Ports: add USB2 or USB3 driver and add the filter for your connected camera.
+6. Setting > Shared Folders: add Folder Path `/private/var/tmp` with Folder Name `/tmp2`
+7. Start the boot2docker VM
+8. `docker pull kd6kxr/entangle`
+9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users:/Users -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entagle`
+10. `exit` when finished
 
 ```
        Entangle: Tethered Camera Control & Capture
