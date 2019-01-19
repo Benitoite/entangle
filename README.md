@@ -26,7 +26,7 @@
 6. Setting > Shared Folders: add Folder Path `/private/var/tmp` with Folder Name `/tmp2`
 7. Start the boot2docker VM
 8. `docker pull kd6kxr/entangle`
-9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users:/Users -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entangle`
+9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $(cat /tmp2/homedir:/hi -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entangle`
 10. `exit` when finished
 
 <hr>
