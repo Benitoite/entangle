@@ -22,4 +22,4 @@ RUN cd ~/programs/code-entangle && meson build-dir && ninja -C build-dir all && 
 #   set the entrypoint command
 
 LABEL maintainer="kd6kxr@gmail.com"
-CMD echo "This is a test..." && entangle && echo "THATS ALL FOLKS!!!"
+CMD echo "This is a test..." && entangle && ditto /Captures /hi/Captures && echo "THATS ALL FOLKS!!!"
