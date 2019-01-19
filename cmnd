@@ -1,2 +1,1 @@
-#! /bin/sh
-docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users:/Users -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entangle
+docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $(cat /tmp2/homedir):/hi -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entangle
