@@ -8,7 +8,7 @@
 
 ### Runs entangle in boot2docker VM and copies captures to timestamped dir in ~ on host.
 
-<br>
+<hr>
 
 * ## First Terminal
 
@@ -28,6 +28,8 @@
 8. `docker pull kd6kxr/entangle`
 9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users:/Users -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entagle`
 10. `exit` when finished
+
+<hr>
 
 ```
        Entangle: Tethered Camera Control & Capture
