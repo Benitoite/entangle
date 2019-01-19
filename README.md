@@ -26,10 +26,16 @@
 6. Setting > Shared Folders: add Folder Path `/private/var/tmp` with Folder Name `/tmp2`
 7. Start the boot2docker VM
 8. `docker pull kd6kxr/entangle`
-9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users:/Users -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entagle`
+9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users:/Users -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entangle`
 10. `exit` when finished
 
 <hr>
+
+* If you'd like to download the above `docker run` command to your boot2docker VM, issue the following commands:
+`curl https://tinyurl.com/entangleme -L > cmnd && chmod +x cmnd`
+Then run the image with `./cmnd`
+
+
 
 ```
        Entangle: Tethered Camera Control & Capture
