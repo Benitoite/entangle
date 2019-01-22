@@ -17,13 +17,13 @@
 
 * ## In Second Terminal
 
-3. `echo $(ifconfig en1 | grep inet\ | awk '{print $2}') > /private/var/tmp/hostip`
+3. `echo $(ifconfig -a|tail +9|grep 'inet '|cut -d ' ' -f 2|head -1) > /private/var/tmp/hostip`
 4. `echo $HOME>/private/var/tmp/homedir` 
 
-* ## In VirtualBox
+* ## In VirtualBox / boot2docker (
 
 5. Settings > Ports: add USB2 or USB3 driver and add the filter for your connected camera.
-6. Setting > Shared Folders: add Folder Path `/private/var/tmp` with Folder Name `/tmp2`
+6. Setting > Shared Folders: add Folder Path `/private/var/tmp` with Mount Point `/tmp2` and Folder Path `/Users` with mount point `/Users`
 7. Start the boot2docker VM
 8. `docker pull kd6kxr/entangle`
 9. `docker run -it -e DISPLAY=$(cat /tmp2/hostip):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $(cat /tmp2/homedir):/hi -v /dev/bus/usb:/dev/bus/usb --privileged kd6kxr/entangle`
@@ -35,6 +35,7 @@
 `curl https://tinyurl.com/entangleme -L > cmnd && chmod +x cmnd`
 Then run the image with `./cmnd`
 
+* The latest release of the boot2docker ISO can be found here: https://github.com/boot2docker/boot2docker/releases
 
 
 ```
