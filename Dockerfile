@@ -11,7 +11,7 @@ ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8:en
 ENV LC_ALL C.UTF-8
 
-#   clone source code, checkout dev branch
+#   clone source code, checkout release tag
 
 RUN mkdir -p ~/programs && git clone https://gitlab.com/entangle/entangle.git ~/programs/code-entangle &&  cd ~/programs/code-entangle && git checkout v2.0
 
